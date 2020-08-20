@@ -25,10 +25,12 @@ spec:
     PROJECT_NAME = 'web-server'
   }
   stages {
-    stage("build") {
-      steps {
-        sh 'packer build packer.json'
+      stage("build") {
+          steps {
+              container('packer') {
+                  sh 'packer build packer.json'
+              }
+          }
       }
-    }
   }
 }
