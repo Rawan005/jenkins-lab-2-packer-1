@@ -31,9 +31,4 @@ spec:
       }
     }
   }
-  post {
-    success {
-        build quietPeriod: 0, wait: false, job: 'rawan-jenkins-lab-2-tf'  
-    }
-  }
 }
